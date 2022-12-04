@@ -7,12 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SeccionComponent implements OnInit {
   
-  @Input() tituloSeccion: String;
+  @Input() seccion: any;
+  TituloSeccion: string;
+  ListaJuegos: any[];
+
   constructor() {
-    this.tituloSeccion="Titulo predefinido";
+    this.TituloSeccion="";
+    this.ListaJuegos = [];
    }
 
   ngOnInit(): void {
+    this.TituloSeccion=this.seccion.nombre;
+    this.ListaJuegos=this.seccion.juegos;
   }
 
 }

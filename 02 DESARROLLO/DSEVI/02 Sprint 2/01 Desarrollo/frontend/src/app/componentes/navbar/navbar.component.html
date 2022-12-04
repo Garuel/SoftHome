@@ -6,7 +6,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>  
         <!-- brand -->
-        <a class="navbar-brand px-3" href="#">
+        <a class="navbar-brand px-3" routerLink="">
           <img src="..\..\assets\icons\ticket-perforated.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
           TODI STORE 
         </a>
@@ -19,18 +19,21 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" data-bs-dismiss="offcanvas">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link" routerLink="dashboard" >Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Catalogo</a>
+              <a class="nav-link" routerLink="">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Desarrolladores</a>
+              <a class="nav-link" routerLink="">Catalogo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Lista de deseados</a>
+              <a class="nav-link" routerLink="">Desarrolladores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="">Lista de deseados</a>
             </li>
           </ul>
           
@@ -42,6 +45,6 @@
         <button class="btn btn-outline-light" type="submit">Buscar</button> <!--btn-outline-success-->
       </form>
       <!-- Boton Login -->
-      <button type="button" class="btn btn-outline-light">Ingresar</button>
+      <button type="button" class="btn btn-outline-light" routerLink="login">Ingresar</button>
     </div>
   </nav>

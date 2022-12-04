@@ -9,6 +9,7 @@ import { SeccionComponent } from './componentes/pagina-inicio/seccion/seccion.co
 import { PaginaDashboardComponent } from './componentes/pagina-dashboard/pagina-dashboard.component';
 import { CardComponent } from './componentes/pagina-dashboard/card/card.component';
 import { PaginaLoginComponent } from './componentes/pagina-login/pagina-login.component';
+import { GamecardComponent } from './componentes/pagina-inicio/seccion/gamecard/gamecard.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PaginaLoginComponent } from './componentes/pagina-login/pagina-login.co
     PaginaDashboardComponent,
     CardComponent,
     PaginaLoginComponent,
+    GamecardComponent,
   ],
   imports: [
     BrowserModule,
