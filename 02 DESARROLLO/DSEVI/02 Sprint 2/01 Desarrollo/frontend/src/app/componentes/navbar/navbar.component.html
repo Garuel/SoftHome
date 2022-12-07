@@ -1,0 +1,50 @@
+<nav class="navbar navbar-dark bg-dark"> <!-- navbar-expand-lg -->
+    <div class="container-lg">
+      <div>
+        <!-- Boton para expandir el menu offcanvas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+        <!-- brand -->
+        <a class="navbar-brand px-3" routerLink="">
+          <img src="..\..\assets\icons\ticket-perforated.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          TODI STORE 
+        </a>
+      </div>
+
+      <!-- Offcanvas -->
+      <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Bienvenido!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" data-bs-dismiss="offcanvas">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="dashboard" >Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="">Catalogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="">Desarrolladores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="">Lista de deseados</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+      <!-- SearchBox -->
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Busca juegos, desarrolladores..." aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Buscar</button> <!--btn-outline-success-->
+      </form>
+      <!-- Boton Login -->
+      <button type="button" class="btn btn-outline-light" routerLink="login">Ingresar</button>
+    </div>
+  </nav>
