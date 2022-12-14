@@ -11,6 +11,8 @@ import { CardComponent } from './componentes/pagina-dashboard/card/card.componen
 import { PaginaLoginComponent } from './componentes/pagina-login/pagina-login.component';
 import { GamecardComponent } from './componentes/pagina-inicio/seccion/gamecard/gamecard.component';
 import { PaginaCatalogoComponent } from './componentes/pagina-catalogo/pagina-catalogo.component';
+import { PaginaCarritoComponent } from './componentes/pagina-carrito/pagina-carrito.component';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { PaginaCatalogoComponent } from './componentes/pagina-catalogo/pagina-ca
     CardComponent,
     PaginaLoginComponent,
     GamecardComponent,
+    PaginaCarritoComponent
     PaginaCatalogoComponent,
   ],
   imports: [
