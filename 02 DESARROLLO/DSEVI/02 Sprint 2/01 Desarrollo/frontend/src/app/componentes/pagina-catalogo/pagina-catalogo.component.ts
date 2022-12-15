@@ -34,7 +34,6 @@ export class PaginaCatalogoComponent implements OnInit {
   
   agregarCarrito(juego:any){
       this.carrito.mandarAlCarrito(juego);
-
   }
 
 

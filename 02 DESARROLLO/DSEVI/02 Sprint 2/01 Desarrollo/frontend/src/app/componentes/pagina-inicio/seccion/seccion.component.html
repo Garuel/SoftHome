@@ -3,7 +3,7 @@
         <h5 class="titulo-seccion"> {{TituloSeccion}}</h5>
     </div>
     <div class="row">
-        <div *ngFor="let juego of ListaJuegos" class="col">
+        <div *ngFor="let juego of ListaItems" class="col">
             <app-gamecard [DatosJuego]="juego"></app-gamecard>
         </div>
     </div>
