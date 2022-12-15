@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarritoService } from 'src/app/servicios/carrito.service';
 
 @Component({
   selector: 'app-pagina-carrito',
@@ -6,16 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagina-carrito.component.css']
 })
 export class PaginaCarritoComponent implements OnInit {
+  
+  carrito: any[];
+  
 
-  constructor() { }
+  constructor(private carritoService: CarritoService) { 
+
+    this.carrito = this.carritoService.recogerCarrito();
+       
+
+  }
+
+  sacarDelCarrito(id: number){
+    let index=this.carrito.indexOf({id:id});
+    this.carrito.splice(index,1);
+    this.carritoService.sacarDelCarrito(id);;
+  }
 
   ngOnInit(): void {
   }
-
-  juegos = [
-    {'nombre':"Doom",'precio':'120',imagen:"https://bit.ly/3j2W4AS"},
-    {'nombre':"God of War",'precio':'130',imagen:"https://bit.ly/3j5jVzG"},
-    {'nombre':"Call of Duty",'precio':'110',imagen:".https://acortar.link/KYovFP"}
-  ];
   
 }

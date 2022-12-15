@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { CarritoService } from 'src/app/servicios/carrito.service';
 
 @Component({
   selector: 'app-pagina-catalogo',
@@ -12,7 +13,7 @@ export class PaginaCatalogoComponent implements OnInit {
   categoria: string;
 
 
-  constructor(private aRoute: ActivatedRoute) { 
+  constructor(private aRoute: ActivatedRoute, private carrito:CarritoService) { 
     this.ListaJuegos=[
       {id:1, nombre: "Among Us", developer: " Innersloth", precio:50.00, tags: ['Accion y aventuras','Destacados'], imageURL: "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_AmongUs.jpg"},
       {id:2,nombre: "Cyberpunk 2077", developer: "CD Projekt", precio:50.00, tags: ['Accion y aventuras','Destacados'], imageURL: "https://assets2.razerzone.com/images/og-image/razer-viper-ultimate-cyberpunk-2077-og-image.jpg"},
@@ -31,10 +32,12 @@ export class PaginaCatalogoComponent implements OnInit {
   
   }
   
-  agregarCarrito(id:number){
-      console.log(id);
+  agregarCarrito(juego:any){
+      this.carrito.mandarAlCarrito(juego);
+
   }
-  
+
+
   ngOnInit(): void {
     
   }

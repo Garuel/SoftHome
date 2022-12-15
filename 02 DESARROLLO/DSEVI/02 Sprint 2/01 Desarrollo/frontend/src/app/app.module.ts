@@ -24,7 +24,7 @@ import { PaginaCarritoComponent } from './componentes/pagina-carrito/pagina-carr
     CardComponent,
     PaginaLoginComponent,
     GamecardComponent,
-    PaginaCarritoComponent
+    PaginaCarritoComponent,
     PaginaCatalogoComponent,
   ],
   imports: [
