@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,11 +26,10 @@ export class CarritoService {
   }
 
   recogerCarrito(): any[] {
-    let item;
-    for(var i=0; i<this.storage.length;i++ ){
-      
-      item=JSON.parse(this.storage.getItem((i+1).toString())!);
-      
+    var item;
+    var keys = Object.keys(sessionStorage);
+    for(var key in keys){
+      item=JSON.parse(this.storage.getItem(keys[key].toString())!);      
       this.carrito.push(item);
     }
     return this.carrito;

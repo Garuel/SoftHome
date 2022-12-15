@@ -9,19 +9,42 @@ import { CarritoService } from 'src/app/servicios/carrito.service';
 export class PaginaCarritoComponent implements OnInit {
   
   carrito: any[];
-  
+  totalCompra: number;
 
   constructor(private carritoService: CarritoService) { 
 
     this.carrito = this.carritoService.recogerCarrito();
+    this.totalCompra=this.calcularTotal();
        
 
   }
 
-  sacarDelCarrito(id: number){
-    let index=this.carrito.indexOf({id:id});
+  calcularTotal():number{
+    var total=0;
+    for(var juego of this.carrito){
+      total=total+juego["precio"];
+    }
+    return total;
+  }
+
+  sacarDelCarrito(gameid: number){
+
+    var cuenta=0;
+    var index=-1;
+
+    for(var juego of this.carrito){
+      
+      if(Object.values(juego)[0]==gameid){
+        index=cuenta;
+      }
+      cuenta=cuenta+1;
+    }
     this.carrito.splice(index,1);
-    this.carritoService.sacarDelCarrito(id);;
+    this.carritoService.sacarDelCarrito(gameid);
+
+    this.totalCompra=this.calcularTotal();
+
+    
   }
 
   ngOnInit(): void {
