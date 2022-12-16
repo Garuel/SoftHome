@@ -28,7 +28,7 @@
     <div class="list-group">
         <div *ngFor="let juego of ListaJuegos">
 
-            <div class="card">
+            <div class="card" >
                 <div class="row g-0"> 
                     <div class="col-md-4">
                         <img src="{{juego['imageURL']}}" class="img-fluid rounded-start">
@@ -43,9 +43,9 @@
                                     <p>{{juego["developer"]}}</p>
                                     <p>Release date: dd/mm/aaaa</p>
                                 </div>
-                                <div class="col-4" style="align-self: flex-end;">
+                                <div class="col-4" style="align-self: flex-end;" >
                                     S/ {{juego["precio"]}}  
-                                    <button type="button" class="btn btn-success">Añadir al carrito</button>
+                                    <button type="button" class="btn btn-success" (click)="agregarCarrito(juego)">Añadir al carrito</button>
                                 </div>
                             </div>
                                                         

@@ -9,16 +9,16 @@ export class SeccionComponent implements OnInit {
   
   @Input() seccion: any;
   TituloSeccion: string;
-  ListaJuegos: any[];
+  ListaItems: any[];
 
   constructor() {
     this.TituloSeccion="";
-    this.ListaJuegos = [];
+    this.ListaItems = [];
    }
 
   ngOnInit(): void {
     this.TituloSeccion=this.seccion.nombre;
-    this.ListaJuegos=this.seccion.juegos;
+    this.ListaItems=this.seccion.items;
   }
 
 }
