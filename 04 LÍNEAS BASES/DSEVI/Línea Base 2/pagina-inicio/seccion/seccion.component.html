@@ -1,0 +1,11 @@
+<div class="container-lg">
+    <div class="row">
+        <h5 class="titulo-seccion"> {{TituloSeccion}}</h5>
+    </div>
+    <div class="row">
+        <div *ngFor="let juego of ListaItems" class="col">
+            <app-gamecard [DatosJuego]="juego"></app-gamecard>
+        </div>
+    </div>
+</div>
+  
