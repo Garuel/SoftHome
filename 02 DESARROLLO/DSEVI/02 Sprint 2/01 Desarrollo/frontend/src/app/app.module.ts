@@ -7,11 +7,14 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { PaginaInicioComponent } from './componentes/pagina-inicio/pagina-inicio.component';
 import { SeccionComponent } from './componentes/pagina-inicio/seccion/seccion.component';
 import { PaginaDashboardComponent } from './componentes/pagina-dashboard/pagina-dashboard.component';
-import { CardComponent } from './componentes/pagina-dashboard/card/card.component';
 import { PaginaLoginComponent } from './componentes/pagina-login/pagina-login.component';
 import { GamecardComponent } from './componentes/pagina-inicio/seccion/gamecard/gamecard.component';
 import { PaginaCatalogoComponent } from './componentes/pagina-catalogo/pagina-catalogo.component';
 import { PaginaCarritoComponent } from './componentes/pagina-carrito/pagina-carrito.component';
+
+import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component';
+import { FooterComponent } from './componentes/footer/footer.component';
+var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
 
 @NgModule({
@@ -21,11 +24,12 @@ import { PaginaCarritoComponent } from './componentes/pagina-carrito/pagina-carr
     PaginaInicioComponent,
     SeccionComponent,
     PaginaDashboardComponent,
-    CardComponent,
     PaginaLoginComponent,
     GamecardComponent,
     PaginaCarritoComponent,
     PaginaCatalogoComponent,
+    CanvasJSChart,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+a {
+    color: grey;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
