@@ -1,0 +1,60 @@
+<div class="container-lg">
+    <!-- <h2>Catalogo de juegos por categoria</h2> -->
+
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/catalogo/Destacados">Destacados</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/catalogo/Accion">Accion y aventuras</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/catalogo/Rol">Rol</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/catalogo/Arcade">Arcade</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/catalogo/Mundo_abierto">Mundo abierto</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/catalogo/Plataformas">Plataformas</a>
+        </li>
+    </ul>
+
+    <h2 *ngIf="categoria != null">Catalogo: {{categoria}}</h2>
+    <h2 *ngIf="categoria == null ">Catalogo</h2>
+    
+    <div class="list-group">
+        <div *ngFor="let juego of ListaJuegos">
+
+            <div class="card" >
+                <div class="row g-0"> 
+                    <div class="col-md-4">
+                        <img src="{{juego['imageURL']}}" class="img-fluid rounded-start">
+                    </div>
+                                
+                    <div class="col-md-8">
+                        <div class="card-body">
+
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title">{{juego["nombre"]}}</h5>
+                                    <p>{{juego["developer"]}}</p>
+                                    <p>Release date: dd/mm/aaaa</p>
+                                </div>
+                                <div class="col-4" style="align-self: flex-end;" >
+                                    S/ {{juego["precio"]}}  
+                                    <button type="button" class="btn btn-success" (click)="agregarCarrito(juego)">Añadir al carrito</button>
+                                </div>
+                            </div>
+                                                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

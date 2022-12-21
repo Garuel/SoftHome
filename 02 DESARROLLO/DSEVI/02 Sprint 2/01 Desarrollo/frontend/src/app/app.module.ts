@@ -10,6 +10,9 @@ import { PaginaDashboardComponent } from './componentes/pagina-dashboard/pagina-
 import { CardComponent } from './componentes/pagina-dashboard/card/card.component';
 import { PaginaLoginComponent } from './componentes/pagina-login/pagina-login.component';
 import { GamecardComponent } from './componentes/pagina-inicio/seccion/gamecard/gamecard.component';
+import { PaginaCatalogoComponent } from './componentes/pagina-catalogo/pagina-catalogo.component';
+import { PaginaCarritoComponent } from './componentes/pagina-carrito/pagina-carrito.component';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { GamecardComponent } from './componentes/pagina-inicio/seccion/gamecard/
     CardComponent,
     PaginaLoginComponent,
     GamecardComponent,
+    PaginaCarritoComponent,
+    PaginaCatalogoComponent,
   ],
   imports: [
     BrowserModule,
