@@ -1,1 +1,35 @@
-<p>pagina-registro.component works!</p>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h1>Registrarse</h1>
+          <form class="form" role="form" method="post" action="login" acceptCharset="UTF-8" id="login-nav" >
+
+            <div class="form-group">
+              <label class="sr-only" htmlFor="user_email">Username</label>
+              <input name="username" 
+              type="name" 
+              class="form-control" 
+              id="user_name" 
+              onChange={handleInputChange}
+              placeholder="Username" required />
+            </div>
+          
+        <div class="form-group">
+          <label class="sr-only" htmlFor="user_password">Password</label>
+          <input name="password" 
+          type="password" 
+          class="form-control" 
+          id="user_password" 
+          onChange={handleInputChange}
+          placeholder="Password" required />
+        
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block" id="authButton">Save</button>
+        </div>
+        </form>
+      </div></div>
+    
+    </div>
+  </div>
